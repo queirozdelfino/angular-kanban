@@ -1,0 +1,27 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  .sub-navbar {
+    background: rgba($color: #888888, $alpha: 0.5);
+    padding: 8px 15px;
+
+    .sub-navbar-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+  }
+  .board-wrapper {
+    display: flex;
+    flex-grow: 1;
+    overflow-x: auto;
+  }
+}

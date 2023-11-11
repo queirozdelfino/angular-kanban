@@ -1,0 +1,22 @@
+/* Global style to project */
+
+// Google Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700|Lato:400,800,900");
+$family-sans-serif: "Nunito", sans-serif;
+
+//Global variables
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+//Global styles
+html,
+body {
+  height: 100%;
+}
+
+html {
+  overflow-y: auto !important;
+  background-image: url("./assets/bg.svg");
+  background-size: cover;
+}
