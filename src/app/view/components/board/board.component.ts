@@ -8,9 +8,9 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
-import { Board } from '../../models/board.model';
-import { Column } from '../../models/column.model';
 import { TaskComponent } from '../task/task.component';
+import { Board } from '../../../models/board.model';
+import { Column } from '../../../models/column.model';
 
 @Component({
   selector: 'Board',

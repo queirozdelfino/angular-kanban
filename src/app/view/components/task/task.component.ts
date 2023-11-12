@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Column } from '../../models/column.model';
 import { CdkDrag } from '@angular/cdk/drag-drop';
 import { IconComponent } from '../icon/icon.component';
 import { TaskInputComponent } from '../task-input/task-input.component';
+import { Column } from '../../../models/column.model';
 
 @Component({
   selector: 'Tasks',
