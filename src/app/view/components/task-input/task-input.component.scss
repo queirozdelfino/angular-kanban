@@ -1,0 +1,26 @@
+.task-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+}
+
+::ng-deep .mdc-text-field {
+  background: rgba($color: #ffffff, $alpha: 0.2) !important;
+  border-radius: 0px !important;
+}
+
+.icon-button {
+  margin-bottom: 22px;
+  background: rgba($color: #ffffff, $alpha: 0.2) !important;
+  border-style: none none solid none;
+  border-bottom-width: 1px;
+
+  &:hover {
+    background: rgba($color: #ffffff, $alpha: 0.8) !important;
+  }
+}

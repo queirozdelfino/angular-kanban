@@ -1,5 +1,5 @@
 <div class="board-columns" cdkDropListGroup>
-  <div class="board-column" *ngFor="let column of board.columns">
+  <div class="board-column" *ngFor="let column of board.columns index as i">
     <div class="column-title">{{ column.name }}</div>
     <div
       class="tasks-container"
@@ -7,7 +7,12 @@
       [cdkDropListData]="column.tasks"
       (cdkDropListDropped)="drop($event)"
     >
-      <Tasks [column]="column" />
+      <Tasks
+        [column]="column"
+        [columnIndex]="i"
+        (sendTaskInsert)="addTask($event)"
+        (sendTaskDelete)="removeTask($event)"
+      />
     </div>
   </div>
 </div>

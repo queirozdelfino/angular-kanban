@@ -1,4 +1,4 @@
-<div class="task-card" *ngFor="let item of column.tasks" cdkDrag>
+<div class="task-card" *ngFor="let item of column.tasks; index as i" cdkDrag>
   <div class="description">
     <Icon name="drag_indicator" class="iconDrag" />
     <div class="text">
@@ -7,11 +7,9 @@
   </div>
   <div class="delete-container">
     <div class="marker"></div>
-    <Icon name="delete" class="iconRemove" />
+    <Icon name="delete" class="iconRemove" (click)="deleteTask(i, item)" />
   </div>
 </div>
 @if(column.name === 'To Do'){
-<div class="task-card add">
-  <TaskInput />
-</div>
+<TaskInput (sendTask)="recieveTask($event)" />
 }

@@ -1,18 +1,26 @@
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <mat-label>Email</mat-label>
-    <input
-      type="email"
-      matInput
-      [formControl]="emailFormControl"
-      [errorStateMatcher]="matcher"
-      placeholder="Ex. pat@example.com"
-    />
-    @if (emailFormControl.hasError('email') &&
-    !emailFormControl.hasError('required')) {
-    <mat-error>Please enter a valid email address</mat-error>
-    } @if (emailFormControl.hasError('required')) {
-    <mat-error>Email is <strong>required</strong></mat-error>
-    }
-  </mat-form-field>
+<form>
+  <div class="task-card">
+    <mat-form-field class="input-container">
+      <mat-label>Add a task...</mat-label>
+      <input
+        type="text"
+        matInput
+        [formControl]="task"
+        [errorStateMatcher]="matcher"
+        placeholder="Ex: Walk with dog"
+      />
+      @if (task.hasError('required')) {
+      <mat-error>Field is <strong>required</strong></mat-error>
+      }
+    </mat-form-field>
+    <button
+      mat-icon-button
+      color="primary"
+      aria-label="Example icon button with a home icon"
+      class="icon-button"
+      (click)="addTask()"
+    >
+      <Icon name="done" />
+    </button>
+  </div>
 </form>

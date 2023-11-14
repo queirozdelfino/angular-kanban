@@ -27,10 +27,18 @@ import { Column } from '../../../models/column.model';
 })
 export class BoardComponent {
   board: Board = new Board('Test Board', [
-    new Column('To Do', ['Some Random', 'Test']),
+    new Column('To Do', ['Some Random', 'Test', 'Test']),
     new Column('Implementing', ['Some Random 2', 'Test2']),
     new Column('Done', ['Test3']),
   ]);
+
+  addTask(event: string) {
+    this.board.columns[0].tasks.push(event);
+  }
+
+  removeTask(event: any) {
+    this.board.columns[event.columnIndex].tasks.splice(event.index, 1);
+  }
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {

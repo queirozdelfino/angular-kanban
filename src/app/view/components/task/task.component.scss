@@ -28,11 +28,16 @@
   .delete-container {
     display: flex;
     align-items: center;
+    width: 30px;
     .marker {
       width: 2px;
       height: 100%;
       background-color: #db0808;
     }
+  }
+
+  .text {
+    padding: 0px 5px 1px 5px;
   }
 
   &:hover {
