@@ -9,8 +9,10 @@
         [errorStateMatcher]="matcher"
         placeholder="Ex: Walk with dog"
       />
-      @if (task.hasError('required')) {
+      @if (task.hasError('required') || task.hasError('noSpaceAllowed')) {
       <mat-error>Field is <strong>required</strong></mat-error>
+      } @if (task.hasError('maxlength')) {
+      <mat-error>Max length is <strong>40</strong></mat-error>
       }
     </mat-form-field>
     <button

@@ -27,9 +27,9 @@ import { Column } from '../../../models/column.model';
 })
 export class BoardComponent {
   board: Board = new Board('Test Board', [
-    new Column('To Do', ['Some Random', 'Test', 'Test']),
-    new Column('Implementing', ['Some Random 2', 'Test2']),
-    new Column('Done', ['Test3']),
+    new Column('To Do', ['Drag me!', 'Test here']),
+    new Column('Implementing', ['Delete me, please.']),
+    new Column('Done', ['angular-kanban']),
   ]);
 
   addTask(event: string) {

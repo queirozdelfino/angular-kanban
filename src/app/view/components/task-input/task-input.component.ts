@@ -1,9 +1,7 @@
-import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormControl,
-  FormGroupDirective,
-  NgForm,
   Validators,
   FormsModule,
   ReactiveFormsModule,
@@ -11,7 +9,7 @@ import {
 
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MyErrorStateMatcher } from '../../../utils/formUtils';
+import { MyErrorStateMatcher, NameWhiteSpace } from '../../../utils/formUtils';
 import { IconComponent } from '../icon/icon.component';
 
 @Component({
@@ -29,15 +27,18 @@ import { IconComponent } from '../icon/icon.component';
   ],
 })
 export class TaskInputComponent {
-  task = new FormControl('', [Validators.required]);
+  task = new FormControl('', [
+    Validators.required,
+    NameWhiteSpace.noSpaceAllowed,
+    Validators.maxLength(40),
+  ]);
 
   @Output() sendTask = new EventEmitter();
 
   addTask() {
     if (this.task.valid) {
       this.sendTask.emit(this.task.value);
-      this.task.setErrors(null);
-      this.task.reset();
+      this.task.setValue('');
     }
   }
 

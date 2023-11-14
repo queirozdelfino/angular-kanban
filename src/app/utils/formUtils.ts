@@ -1,4 +1,10 @@
-import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
+import {
+  AbstractControl,
+  FormControl,
+  FormGroupDirective,
+  NgForm,
+  ValidationErrors,
+} from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -12,5 +18,14 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
       control.invalid &&
       (control.dirty || control.touched || isSubmitted)
     );
+  }
+}
+
+export class NameWhiteSpace {
+  static noSpaceAllowed(control: AbstractControl): ValidationErrors | null {
+    if ((control.value as string).trim().length == 0) {
+      return { noSpaceAllowed: true };
+    }
+    return null;
   }
 }
