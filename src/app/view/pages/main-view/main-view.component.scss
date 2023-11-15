@@ -10,12 +10,14 @@
   flex-grow: 1;
 
   .sub-navbar {
-    background: rgba($color: #888888, $alpha: 0.5);
+    display: flex;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(109, 109, 109, 0.75));;
+    align-items: center;
     padding: 8px 15px;
+    min-height: 45px;
 
     .sub-navbar-name {
       font-size: 20px;
-      font-weight: bold;
       color: #ffffff;
     }
   }

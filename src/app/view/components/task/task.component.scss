@@ -15,12 +15,12 @@
     font-size: 18px;
   }
 
-  .iconDrag {
+  .icon-drag {
     display: flex;
     color: #006876;
   }
 
-  .iconRemove {
+  .icon-remove {
     display: flex;
     visibility: hidden;
     padding-left: 5px;
@@ -42,13 +42,13 @@
   }
 
   &:hover {
-    .iconRemove {
+    .icon-remove {
       display: flex;
       visibility: visible;
       color: #db0808;
       padding-left: 5px;
     }
-    .iconRemove:hover {
+    .icon-remove:hover {
       color: #750000;
     }
   }

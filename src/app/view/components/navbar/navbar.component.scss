@@ -1,11 +1,9 @@
 .app-name {
-  font-size: 28px;
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.has-gradient {
-  background: -webkit-linear-gradient(#ffffff, #8cdcee);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.flex-navbar {
+  justify-content: flex-end;
 }

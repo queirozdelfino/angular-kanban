@@ -1,13 +1,13 @@
 <div class="task-card" *ngFor="let item of column.tasks; index as i" cdkDrag>
   <div class="description">
-    <Icon name="drag_indicator" class="iconDrag" />
+    <Icon name="drag_indicator" class="icon-drag" />
     <div class="text">
       {{ item }}
     </div>
   </div>
   <div class="delete-container">
     <div class="marker"></div>
-    <Icon name="delete" class="iconRemove" (click)="deleteTask(i, item)" />
+    <Icon name="delete" class="icon-remove" (click)="deleteTask(i, item)" />
   </div>
 </div>
 @if(column.name === 'To Do'){
