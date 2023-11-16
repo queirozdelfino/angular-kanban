@@ -27,9 +27,9 @@
   }
 
   .delete-container {
-    display: flex;
+    display: -webkit-inline-box;
     align-items: center;
-    width: 30px;
+    width: 25px;
     .marker {
       width: 2px;
       height: 100%;
